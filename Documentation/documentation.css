@@ -1,0 +1,71 @@
+body {
+    font-family: 'Baloo Da 2';
+    min-width: 630px;
+}
+
+header {
+    width: auto;
+}
+
+h1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 90%;
+}
+
+code {
+    display: block;
+    background-color: rgb(229, 226, 226);
+    padding: 7px;
+    border: 2px solid black;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+a:link {
+    color: rgb(85, 84, 84);
+}
+
+#nav-link {
+    display: block;
+}
+
+/* #navbar {
+    position: fixed;
+} */
+
+@media (min-width: 650px) {
+    body {
+        display: grid;
+        grid-template-columns: 175px auto;
+        grid-template-areas: 'navbar main';
+    }
+    .links {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 200px;
+        height: 25%;
+    }
+    #navbar {
+        margin-right: 10px;
+        /* border: 1px solid red; */
+        width: 175px;
+        position: fixed;
+        grid-area: navbar;
+    }
+    #main-doc {
+        grid-area: main;
+        border-left: 3px solid black;
+        padding-left: 8px;
+    }
+}
